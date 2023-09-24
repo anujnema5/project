@@ -6,7 +6,7 @@ function Coursescards({details}: {details: course}) {
   const {imgSrc, title} = details
 
   return (
-    <div className='flex flex-col cursor-pointer hover:scale-105 duration-300 transition-all ease-in-out hover:shadow-2xl justify-center shadow-xl shadow-black/20 hover:shadow-black/40 sm:w-64 sm:h-72 w-10/12 border-2 mb-5'>
+    <div className='flex flex-col cursor-pointer hover:scale-105 duration-300 transition-all ease-in-out hover:shadow-2xl justify-center shadow-xl shadow-black/20 hover:shadow-black/40 sm:w-64 sm:h-72 w-10/12 mb-5'>
       <Image src={imgSrc} alt='course-thumnail' width={200} height={200} className='w-full rounded-md h-full'/>
 
       <div className="bg-white py-5 px-5 flex flex-col items-center rounded-md">
