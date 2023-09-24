@@ -8,7 +8,7 @@ function ContentLayout({info}: {info: string}) {
   const Content = getMDXComponent(foundContent.body.code)
   
   return (
-    <article className='prose max-w-5xl text-center py-10 px-5 lg:px-0 mx-auto'>
+    <article className='prose max-w-5xl lg:prose-p:text-base prose-p:leading-7 prose-p:text-sm text-center py-10 px-5 lg:px-0 mx-auto'>
       <Content />
       <button className='bg-gradient-to-r from-pink-700 to-blue-800 rounded-3xl py-1 px-4 mt-1 text-gray-200'>Read More</button>
     </article>
