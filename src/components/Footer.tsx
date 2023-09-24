@@ -1,5 +1,6 @@
 import { InfoHeader } from '@/data/HeaderLinks'
 import { footerData } from '@/data/sitedata'
+import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
@@ -7,7 +8,7 @@ function Footer() {
     const { name, mail, phoneNumber, socialIcons, title } = InfoHeader
 
     return (
-        <div className='bg-footer-banner w-full bg-no-repeat bg-cover lg:py-4 lg:pb-8 px-5 py-2'>
+        <footer className='bg-footer-banner w-full bg-no-repeat bg-cover lg:py-4 lg:pb-8 px-5 py-2'>
             <div className='mx-auto lg:max-w-6xl flex flex-col gap-12 justify-between'>
                 <div className="w-full h-full flex lg:flex-row flex-wrap justify-between">
                     {footerData.map((data) => {
@@ -56,19 +57,28 @@ function Footer() {
                     </div>
 
 
-                    <div className="download text-gray-800 flex flex-col lg:gap-4 gap-3 justify-end ">
-                        <span className='lg:text-right text-left'>Download The App</span>
+                    <div className="download mb-3 text-gray-800 flex flex-col lg:gap-4 gap-4 justify-end mt-3">
+                        <span className='lg:text-right text-left text-lg font-semibold'>Download The App</span>
 
-                        <div className='lg:text-right text-left flex lg:justify-end justify-start gap-3'>
-                        <span>Google Play</span>
-                        <span>Apple play store</span>
-                        </div>
+                        <ul className='lg:text-right text-left flex lg:justify-end justify-start gap-3'>
+                            <li
+                            ><Link href={''}>
+                                    <Image alt='play-store' src={'https://www.nifafinearts.com/images/gplay.png'} width={150} height={150} />
+                                </Link>
+                            </li>
 
-                        <span>© Copyright 2021 NIFA Fine Arts. All Rights Reserved.</span>
+                            <li
+                            ><Link href={''}>
+                                    <Image alt='play-store' src={'https://www.nifafinearts.com/images/appstore.png'} width={150} height={150} />
+                                </Link>
+                            </li>
+                        </ul>
+
+                        <span className='text-black/80 font-light'>© Copyright 2021 NIFA Fine Arts. All Rights Reserved.</span>
                     </div>
                 </div>
             </div>
-        </div>
+        </footer>
     )
 }
 
