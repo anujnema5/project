@@ -8,7 +8,7 @@ function Footer() {
     const { name, mail, phoneNumber, socialIcons, title } = InfoHeader
 
     return (
-        <footer className='bg-footer-banner w-full bg-no-repeat bg-cover lg:py-4 lg:pb-8 px-5 py-2'>
+        <footer className='bg-footer-banner w-full bg-no-repeat bg-cover bg-center lg:py-4 lg:pb-8 px-5 py-2'>
             <div className='mx-auto lg:max-w-6xl flex flex-col gap-12 justify-between'>
                 <div className="w-full h-full flex lg:flex-row flex-wrap justify-between">
                     {footerData.map((data) => {
