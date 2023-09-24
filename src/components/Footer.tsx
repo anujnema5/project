@@ -42,7 +42,7 @@ function Footer() {
 
                         <div className='mt-3 flex gap-2 mb-2'>
                             {phoneNumber.numbers.map((number) => (
-                                <Link className='text-sm font-medium' href={`tel:${number}`}>+91 {number}</Link>
+                                <Link className='text-sm font-medium' key={number} href={`tel:${number}`}>+91 {number}</Link>
                             ))}
 
                             {/* MAIL */}
@@ -51,7 +51,7 @@ function Footer() {
 
                         <div className='flex gap-3 mt-3'>
                             {socialIcons.map((icon) => (
-                                <span className='border border-black'>Icon</span>
+                                <span key={icon.title} className='border border-black'>Icon</span>
                             ))}
                         </div>
                     </div>

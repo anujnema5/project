@@ -31,7 +31,7 @@ function Header() {
 
               <div className="social-icons flex gap-2">
                 {socialIcons.map((icon) => (
-                  <span>Icon</span>
+                  <span key={icon.href}>Icon</span>
                 ))}
               </div>
             </div>
@@ -50,7 +50,7 @@ function Header() {
 
           <div className='lg:flex hidden gap-5'>
             {HeaderLinks.map((link) => (
-              <span className='text-black text-sm font-light'>{link.title}</span>
+              <span key={link.href} className='text-black text-sm font-light'>{link.title}</span>
             ))}
           </div>
 
@@ -65,7 +65,7 @@ function Header() {
               <span className='text-gray-800 text-sm'>+91-</span>
               <div className='flex gap-1'>
                 {phoneNumber.numbers.map((number) => (
-                  <span className='text-sky-950 text-sm'>{number}</span>
+                  <span key={number} className='text-sky-950 text-sm'>{number}</span>
                 ))}
               </div>
             </div>
@@ -73,7 +73,7 @@ function Header() {
             <div className="w-10/12 mt-4 relative">
               <select name="" id="" className='w-full transition-all outline-none appearance-none rounded-md px-3 py-2 bg-slate-800 focus:border focus:border-transparent'>
                 {HeaderLinks.map((link) => (
-                  <option value="" className='rounded-md'>{link.title}</option>
+                  <option value="" key={link.title} className='rounded-md'>{link.title}</option>
                 ))}
               </select>
               <Bottomarrow className='absolute top-2.5 right-4' />
