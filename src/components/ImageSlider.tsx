@@ -43,7 +43,7 @@ const ImageSlider = () => {
 
   return (
     <div className="image-slider flex relative ">
-      <button className='absolute left-5 top-[50%] -translate-y-1/2	-translate-x-1/2	' onClick={handlePrevButtonClick}>
+      <button className='absolute lg:left-5 left-3 top-[50%] -translate-y-1/2	-translate-x-1/2	' onClick={handlePrevButtonClick}>
         <Leftarrow />
       </button>
       <Image src={images[currentIndex].src} alt='cover-images' className='transition-all w-full h-full duration-500 opacity-100 ease-in-out' width={5000} height={5000} />
